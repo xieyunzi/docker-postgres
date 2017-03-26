@@ -1,0 +1,16 @@
+version: '2'
+services:
+  postgres:
+    image: postgres:9.6-alpine
+    ports:
+      - "5432:5432"
+    # environment:
+      # POSTGRES_USER: root
+      # POSTGRES_PASSWORD: root
+    volumes:
+      - ./data:/var/lib/postgresql/data
+
+networks:
+  default:
+    external:
+      name: xz-bridge
