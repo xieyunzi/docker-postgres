@@ -8,6 +8,7 @@ services:
       # POSTGRES_USER: root
       # POSTGRES_PASSWORD: root
     volumes:
+      - /etc/localtime:/etc/localtime:ro
       - ./data:/var/lib/postgresql/data
 
 networks:
